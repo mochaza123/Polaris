@@ -25,7 +25,6 @@ import {
   polygon,
   sepolia,
   zkSync,
-  ronin,
 } from "viem/chains";
 
 export const shibarium = defineChain({
