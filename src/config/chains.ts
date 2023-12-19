@@ -167,7 +167,6 @@ export const inscriptionChains = {
   filecoin,
   shibarium,
   sepolia,
-  ronin,
 };
 
 export type ChainKey = keyof typeof inscriptionChains;
