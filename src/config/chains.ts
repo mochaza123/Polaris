@@ -1,33 +1,174 @@
 import { defineChain } from "viem";
 import {
-  doge,
+  arbitrum,
+  avalanche,
+  base,
+  bsc,
+  celo,
+  classic,
+  confluxESpace,
+  coreDao,
+  cronos,
+  eos,
+  fantom,
+  filecoin,
+  gnosis,
+  iotex,
+  klaytn,
+  linea,
+  mainnet,
+  mantle,
+  neonMainnet,
+  okc,
+  opBNB,
+  optimism,
+  polygon,
+  sepolia,
+  zkSync,
+  ronin,
 } from "viem/chains";
 
-export const doge = defineChain({
+export const shibarium = defineChain({
   id: 109,
-  name: "dogechain",
-  network: "doge",
+  name: "Shibarium",
+  network: "shibarium",
   nativeCurrency: {
-    decimals: 2000,
-    name: "doge",
-    symbol: "doge",
+    decimals: 18,
+    name: "BONE",
+    symbol: "BONE",
   },
   rpcUrls: {
     default: {
-      http: ["https://rpc.dogechain.dog"],
+      http: ["https://rpc.shibrpc.com"],
     },
     public: {
-      http: ["https://rpc.dogechain.dog"],
+      http: ["https://rpc.shibrpc.com"],
     },
   },
   blockExplorers: {
-    default: { name: "Explorer", url: "https://explorer.dogechain.dog/" },
+    default: { name: "Explorer", url: "https://shibariumscan.io" },
+  },
+});
+
+export const ethw = defineChain({
+  id: 10001,
+  name: "ETHW-mainnet",
+  network: "ETHW-mainnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "ETHW",
+    symbol: "ETHW",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://mainnet.ethereumpow.org"],
+    },
+    public: {
+      http: ["https://mainnet.ethereumpow.org"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://mainnet.ethwscan.com" },
+  },
+});
+
+export const kcc = defineChain({
+  id: 321,
+  name: "KCC Mainnet",
+  network: "KCC Mainnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "KCS",
+    symbol: "KCS",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://kcc-rpc.com"],
+    },
+    public: {
+      http: ["https://kcc-rpc.com"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://explorer.kcc.io/en" },
+  },
+});
+
+export const mapo = defineChain({
+  id: 22776,
+  name: "MAP Mainnet",
+  network: "MAP Mainnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "MAPO",
+    symbol: "MAPO",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc.maplabs.io"],
+    },
+    public: {
+      http: ["https://rpc.maplabs.io"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://mapscan.io" },
+  },
+});
+
+export const ronin = defineChain({
+  id: 2020,
+  name: "Ronin Mainnet",
+  network: "Ronin Mainnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "RON",
+    symbol: "RON",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://api.roninchain.com/rpc"],
+    },
+    public: {
+      http: ["https://api.roninchain.com/rpc"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://app.roninchain.com" },
   },
 });
 
 export const inscriptionChains = {
   eth: mainnet,
-  doge,
+  bsc,
+  opBNB,
+  // okc,
+  polygon,
+  fantom,
+  avalanche,
+  arbitrum,
+  optimism,
+  base,
+  zkSync,
+  classic,
+  iotex,
+  klaytn,
+  mantle,
+  mapo,
+  cronos,
+  kcc,
+  coreDao,
+  ethw,
+  eos,
+  neonMainnet,
+  linea,
+  celo,
+  confluxESpace,
+  gnosis,
+  filecoin,
+  shibarium,
+  sepolia,
+  ronin,
 };
 
 export type ChainKey = keyof typeof inscriptionChains;
