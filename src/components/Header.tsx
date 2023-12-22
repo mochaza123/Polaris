@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useContext } from "react";
 
-import logo from "@/assets/imgs/logo.png";
+import logo from "@/assets/imgs/photo_2023-12-22_20-35-30.jpg";
 import ColorModeContext from "@/contexts/colorModeContext";
 
 export default function Header() {
