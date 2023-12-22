@@ -165,10 +165,10 @@ export default function Ierc() {
       </RadioGroup>
 
       <div className=" flex flex-col gap-2">
-        <span>私钥（必填）:</span>
+        <span>Private key (required):</span>
         <TextField
           size="small"
-          placeholder="私钥，带不带 0x 都行，程序会自动处理"
+          placeholder="Private key, with or without 0x, the program will handle it automatically"
           disabled={running}
           onChange={(e) => {
             const text = e.target.value;
@@ -184,10 +184,10 @@ export default function Ierc() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>Tick（必填，例子：ierc-m5）:</span>
+        <span>Tick（Required, example：ierc-m5）:</span>
         <TextField
           size="small"
-          placeholder="tick，例子：ierc-m5"
+          placeholder="tick，example：ierc-m5"
           disabled={running}
           onChange={(e) => {
             const text = e.target.value;
@@ -197,11 +197,11 @@ export default function Ierc() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>数量（必填，每张数量）:</span>
+        <span>Quantity (required, quantity per sheet):</span>
         <TextField
           type="number"
           size="small"
-          placeholder="数量，例子：10000"
+          placeholder="quantity, example：10000"
           disabled={running}
           onChange={(e) => {
             const num = Number(e.target.value);
@@ -211,10 +211,10 @@ export default function Ierc() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>难度（必填，十六进制，例子：0x00000）:</span>
+        <span>Difficulty (required, hex, example：0x00000）:</span>
         <TextField
           size="small"
-          placeholder="难度，十六进制，例子：0x00000"
+          placeholder="difficulty, hex, example：0x00000"
           disabled={running}
           onChange={(e) => {
             const text = e.target.value;
@@ -225,7 +225,7 @@ export default function Ierc() {
 
       <div className=" flex flex-col gap-2">
         <div className=" flex items-center gap-2">
-          <span>cpu 核心数:</span>
+          <span>cpu Number of cores:</span>
           <Button
             size="small"
             color="secondary"
@@ -235,7 +235,7 @@ export default function Ierc() {
               setMineRateList([]);
             }}
           >
-            自定义
+            customize
           </Button>
         </div>
         {customCpu <= 0 ? (
@@ -263,7 +263,7 @@ export default function Ierc() {
           <TextField
             type="number"
             size="small"
-            placeholder="cpu 核心数，例子：12"
+            placeholder="cpu Number of cores, example：12"
             disabled={running}
             value={customCpu}
             onChange={(e) => {
@@ -275,7 +275,7 @@ export default function Ierc() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>RPC（选填，默认公共，http，最好用自己的）:</span>
+        <span>RPC（Optional, the default is public, http, it is best to use your own）:</span>
         <TextField
           size="small"
           placeholder="RPC"
@@ -289,12 +289,12 @@ export default function Ierc() {
 
       <div className=" flex flex-col gap-2">
         <span>
-          gas 溢价（选填，启动程序时候的 gasPrice 乘以溢价作为付出的最高 gas）:
+          gas premium (optional, the gasPrice when starting the program is multiplied by the premium as the maximum amount paid gas）:
         </span>
         <TextField
           type="number"
           size="small"
-          placeholder="默认 110 也就是 1.1 倍率，最低限制 100，例子: 110"
+          placeholder="The default is 110, which is 1.1 magnification, and the minimum limit is 100, example: 110"
           disabled={running}
           onChange={(e) => {
             const num = Number(e.target.value);
@@ -316,11 +316,11 @@ export default function Ierc() {
           }
         }}
       >
-        {running ? "运行中" : "运行"}
+        {running ? "Running" : "Running"}
       </Button>
 
       <Log
-        title={`日志（效率 => ${mineRate} c/s 成功次数 => ${successCount}）:`}
+        title={`日志（efficiency => ${mineRate} c/s Number of successes => ${successCount}）:`}
         logs={logs}
         onClear={() => {
           setLogs([]);
