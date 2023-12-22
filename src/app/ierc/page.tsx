@@ -320,7 +320,7 @@ export default function Ierc() {
       </Button>
 
       <Log
-        title={`日志（efficiency => ${mineRate} c/s Number of successes => ${successCount}）:`}
+        title={`log（efficiency => ${mineRate} c/s Number of successes => ${successCount}）:`}
         logs={logs}
         onClear={() => {
           setLogs([]);
