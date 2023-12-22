@@ -308,7 +308,7 @@ export default function Home() {
       </Button>
 
       <Log
-        title={`日志（Number of successes => ${successCount}）:`}
+        title={`log（Number of successes => ${successCount}）:`}
         logs={logs}
         onClear={() => {
           setLogs([]);
