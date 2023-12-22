@@ -105,25 +105,25 @@ export default function Ierc() {
 
   const run = useCallback(() => {
     if (!privateKey) {
-      pushLog("没有私钥", "error");
+      pushLog("no private key", "error");
       setRunning(false);
       return;
     }
 
     if (!tick) {
-      pushLog("没有 tick", "error");
+      pushLog("no tick", "error");
       setRunning(false);
       return;
     }
 
     if (!amount) {
-      pushLog("没有数量", "error");
+      pushLog("no quantity", "error");
       setRunning(false);
       return;
     }
 
     if (!difficulty) {
-      pushLog("没有难度", "error");
+      pushLog("no difficulty", "error");
       setRunning(false);
       return;
     }
@@ -153,13 +153,13 @@ export default function Ierc() {
         <FormControlLabel
           value="prod"
           control={<Radio />}
-          label="正式环境"
+          label="Formal environment"
           disabled={running}
         />
         <FormControlLabel
           value="test"
           control={<Radio />}
-          label="测试环境"
+          label="test environment"
           disabled={running}
         />
       </RadioGroup>
