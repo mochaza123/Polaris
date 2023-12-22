@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function Media() {
   const mediaList = [
     {
-      title: "代码",
-      linkText: "Github",
-      link: "https://github.com/vectorisvector/inscription",
+      title: "Recode",
+      linkText: "Recode by @mochaza",
+      link: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fthank-you-card&psig=AOvVaw1NFygdkIrAxKhWV5KIZO80&ust=1703336676835000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOCunt-No4MDFQAAAAAdAAAAABAD",
     },
     {
-      title: "开发者",
+      title: "Developer",
       linkText: "@cybervector_",
       link: "https://twitter.com/cybervector_",
     },
