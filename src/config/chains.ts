@@ -159,6 +159,28 @@ export const combo = defineChain({
   },
 });
 
+export const kavaevm = defineChain({
+  id: 2222,
+  name: "Kava EVM",
+  network: "Kava EVM",
+  nativeCurrency: {
+    decimals: 18,
+    name: "KAVA",
+    symbol: "KAVA",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://evm.kava.io"],
+    },
+    public: {
+      http: ["https://evm.kava.io"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://kavascan.com" },
+  },
+});
+
 export const inscriptionChains = {
   eth: mainnet,
   bsc,
@@ -191,6 +213,7 @@ export const inscriptionChains = {
   sepolia,
   ronin,
   combo,
+  kavaevm,
 };
 
 export type ChainKey = keyof typeof inscriptionChains;
