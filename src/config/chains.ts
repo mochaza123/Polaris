@@ -181,6 +181,28 @@ export const kavaevm = defineChain({
   },
 });
 
+export const btt = defineChain({
+  id: 199,
+  name: "BitTorrent Chain Mainnet",
+  network: "BitTorrent Chain Mainnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "BTT",
+    symbol: "BTT",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc.bittorrentchain.io"],
+    },
+    public: {
+      http: ["https://rpc.bittorrentchain.io"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://bttcscan.com" },
+  },
+});
+
 export const inscriptionChains = {
   eth: mainnet,
   bsc,
@@ -214,6 +236,7 @@ export const inscriptionChains = {
   ronin,
   combo,
   kavaevm,
+  btt
 };
 
 export type ChainKey = keyof typeof inscriptionChains;
